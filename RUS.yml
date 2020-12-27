@@ -7,6 +7,7 @@ TARGET_NULL: '&cПользователя с именем &6%name% &cнет в б
 TARGET_OFFLINE: '&6%name% &cсейчас не в сети.'
 UNKNOWN_ERROR: '&cВозникла непредвиденная ошибка! Пожалуйста, сообщите об этом в техподдержку.'
 UNKNOWN_COMMAND: '&cНеизвестная команда. Используйте &6/help &cдля получения помощи по серверу.'
+NEED_NUMBER: '&cВведите корректное число!'
 COPY_HOVER: '&e▶ Скопировать'
 CLICK_URL: '&e▶ Перейти'
 CLICK_USE: '&e▶ Использовать'
@@ -24,9 +25,9 @@ COLOR:
   GREEN: '&2Зелёный'
   LIME: '&aЛаймовый'
   YELLOW: '&eЖёлтый'
-  ORANGE: '&6Оранжевый'
+  ORANGE: '#ff8000Оранжевый'
   GOLDEN: '&6Золотой'
-  BROWN: '&6Коричневый'
+  BROWN: '#ba6300Коричневый'
   SCARLET: '&cАлый'
   RED: '&4Красный'
   PINK: '&dРозовый'
@@ -39,11 +40,11 @@ COLOR:
   WHITE: '&fБелый'
 TIME:
   SECONDS:
-    SINGULAR: 'секунда'
+    SINGULAR: 'секунду'
     DUAL: 'секунды'
     PLURAL: 'секунд'
   MINUTES:
-    SINGULAR: 'минута'
+    SINGULAR: 'минуту'
     DUAL: 'минуты'
     PLURAL: 'минут'
   HOURS:
@@ -55,7 +56,7 @@ TIME:
     DUAL: 'дня'
     PLURAL: 'дней'
   WEEKS:
-    SINGULAR: 'неделя'
+    SINGULAR: 'неделю'
     DUAL: 'недели'
     PLURAL: 'недель'
   MONTHS:
@@ -68,17 +69,30 @@ TIME:
     PLURAL: 'лет'
 CHAT_CANCELLED: '&aОтменено!'
 CHAT_CANCEL: '&7&o[Отменить]'
+
+##################################################
+#                Система скинов                  #
+##################################################
+SKINS:
+  USAGE: '&cИспользуйте: &6/%label% <название>'
+  ALREADY: '&cВы уже используете скин с таким названием!'
+  NOT_FOUND: '&cНе удалось найти скин с таким названием.'
+  SUCCESS: '#2cff2cSkins &8:: &fСкин успешно изменён! Перезайдите, чтобы изминения вошли в силу.'
+  RESET: '#2cff2cSkins &8:: &fСкин успешно сброшен! Перезайдите, чтобы изминения вошли в силу.'
+  CANT_RESET: '&cУ вас уже установлен ваш стандартный скин!'
+  SEARCH: '&7&oОсуществляем поиск скина...'
+
 ##################################################
 #               Система уровней                  #
 ##################################################
 
 LEVEL_UP:
-  TITLE: '&a&lLEVEL'
+  TITLE: '#2cff2c&lLEVEL'
   SUBTITLE: 'Получен новый уровень: &a⇪%level%'
   MESSAGE:
     - ' '
-    - '&aLevels &8:: &fПоздравляем! Вы достигли &a⇪%level% &fуровня!'
-    - '&aLevels &8:: &fДо уровня &2⇪%nlevel% &fосталось &e★%nexp% &fопыта.'
+    - '#2cff2cLevels &8:: &fПоздравляем! Вы достигли &a⇪%level% &fуровня!'
+    - '#2cff2cLevels &8:: &fДо уровня &2⇪%nlevel% &fосталось &e★%nexp% &fопыта.'
     - ' '
 
 ##################################################
@@ -91,34 +105,34 @@ REGISTER_USAGE:
   - '&cИспользуйте: &6/%label% <пароль> <повтор>'
 CHANGEPASSWORD_USAGE:
   - '&cИспользуйте: &6/%label% <секретный_код> <пароль>'
-LOGIN_NOTIFY: '&aAuth &8:: &fВойдите: &a/login <пароль>'
-REGISTER_NOTIFY: '&aAuth &8:: &fПридумайте пароль: &a/reg <пароль> <повтор>'
+LOGIN_NOTIFY: '#2cff2cAuth &8:: &fВойдите: &a/login <пароль>'
+REGISTER_NOTIFY: '#2cff2cAuth &8:: &fПридумайте пароль: &a/reg <пароль> <повтор>'
 FORBIDDEN_CHARS: '&cВы используете запрещённые символы.'
 ALREADY_REGISTERED: '&cЭтот аккаунт уже зарегистрирован!'
 NOT_REGISTERED: '&cЭтот аккаунт не зарегистрирован!'
 AUTH_TIMEOUT: '&cВремя на авторизацию вышло!'
 WRONG_PASSWORD: '&cНеверный пароль! У Вас осталось &6%attempts% &c%ending%.'
 WRONG_SECRET_CODE: '&cНеверный секретный код.'
-SUCCESSFUL_LOGIN: '&aAuth &8:: &fУспешный вход! Приятной игры ;)'
-SUCCESSFUL_CHANGEPASSWORD: '&aSecurity &8:: &fПароль успешно изменён!'
+SUCCESSFUL_LOGIN: '#2cff2cAuth &8:: &fУспешный вход! Приятной игры ;)'
+SUCCESSFUL_CHANGEPASSWORD: '#2cff2cSecurity &8:: &fПароль успешно изменён!'
 CHANGE_SAME_PASSWORD: '&cРанее Вы уже использовали похожий пароль.'
 SUCCESSFUL_REGISTER:
-  ANNOUNCE: '&aAuth &8:: &fУспешная регистрация!'
+  ANNOUNCE: '#2cff2cAuth &8:: &fУспешная регистрация!'
   RECOVERY_LIST:
     - '&r '
-    - '&aAuth &8:: &fВаш секретный код: &a&n%code%&r'
+    - '&aAuth &8:: &fВаш секретный код: &e&n%code%&r'
     - '       &fОбязательно сохраните его! &8&o(наведитесь)'
     - '&r '
     - '&r     &7Никому не сообщайте этот код!'
     - '&r &e⚠&r  &7В противном случае Вы рискуете'
     - '&r     &7потерять свой игровой аккаунт.'
     - '&r '
-    - '&aAuth &8:: &fПодключение к серверу через &a5 &fсекунд.'
-SUCCESSFUL_DROP: '&aAuth &8:: &fПароль успешно сброшен!'
+    - '#2cff2cAuth &8:: &fПодключение к серверу через &e5 &fсекунд.'
+SUCCESSFUL_DROP: '#2cff2cAuth &8:: &fПароль успешно сброшен!'
 PASSWORD_DONT_MATCH: '&cПароли не совпадают!'
 UNSAFE_PASSWORD: '&cЭтот пароль небезопасен! Придумайте другой.'
 PASSWORD_TEMPLATE: '&cВаш пароль должен содержать &c&nкак минимум&r&6&o 3 &cбуквы, &6&o2 &cцифры и &6&o1 &cзнак.'
-PASSWORD_SUGGESTION: '&7&oПример надёжного пароля: %random% &8&o(наведитесь)'
+PASSWORD_SUGGESTION: '&7&oПример &7&oнадёжного &7&oпароля: %random% &8&o(наведитесь)'
 WRONG_NICK_REGISTER: '&cПожалуйста, измените свой ник на &6%nick%'
 BLOCK_IP_ACCOUNT: '&cДанный аккаунт не принадлежит Вам!'
 LOGIN_ATTEMPTS_ENDINGS:
@@ -137,9 +151,34 @@ DISALLOWED_NICKNAME_CHARS:
   SUBTITLE_SECOND: '&cПопробуйте придумать ник без символов &6%symbols%'
   SUBTITLE_THIRD: '&cПопробуйте зайти под другим именем'  
 AUTH_SUBTITLE:
-  REGISTER: 'Регистрация: &a/reg <пароль> <повтор>'
-  LOGIN: 'Авторизация: &a/login <пароль>'
+  REGISTER: 'Регистрация: #2cff2c/reg <пароль> <повтор>'
+  LOGIN: 'Авторизация: #2cff2c/login <пароль>'
   SUCCESS: 'Успешный вход! Подключение...'
+  
+  
+##################################################
+#                   RolePlay                     #
+##################################################
+ME_COMMAND:
+  USAGE: '&cИспользуйте: &6/me <действие...>'
+DO_COMMAND:
+  USAGE: '&cИспользуйте: &6/do <событие...>'
+TRY_COMMAND:
+  USAGE: '&cИспользуйте: &6/try <действие...>'
+  SUCCESS: '&aУдачно'
+  FAIL: '&cНеудачно'
+
+##################################################
+#               Личные сообщения                 #
+##################################################
+TELL_COMMAND:
+  USAGE: '&cИспользуйте: &6/%label% <игрок> <сообщение...>'
+  REPLY_USAGE: '&cИспользуйте: &6/%label% <сообщение...>'
+  TO_SELF: '&cНельзя отправить сообщение самому себе.'
+  SELF: '&7Письмо для &8◦ %name% &8» &f%text%'
+  TARGET: '&7Письмо от &8◦ %name% &8» &f%text%'
+  NO_REPLY: '&cВы не написали ни одного письма.'
+
 
 ##################################################
 #               Интерфейс - общее                #
@@ -148,8 +187,8 @@ AUTH_SUBTITLE:
 MAIN_TAB:
  HEADER:
    - '&r                                       &r'
-   - '&a&lBACKCRAFT'
-   - '&fОнлайн сервера: &a%online%'
+   - '#2cff2c&lBACKCRAFT'
+   - '&fОнлайн сервера: &e%online%'
    - '&r                                       &r'
    - '&7●&8&m&l                     &7●&r'
  FOOTER:
@@ -160,9 +199,9 @@ MAIN_TAB:
    - '&7&oЖелаем приятной игры!'
    - '&r                                       &r'
  LINKS:
-   - '&fВКонтакте: &bvk.com/backcraft'
-   - '&fDiscord: &9discord.gg/nGF9R95'
-   - '&fВеб-сайт: &awww.backcraft.ru'
+   - '&fВКонтакте: #2686f1vk.com/backcraft'
+   - '&fDiscord: #5f7ad0discord.gg/nGF9R95'
+   - '&fВеб-сайт: #2cff2cbackcraft.ru'
 MAIN_SIDEBAR:
   - '&r '
   - '&fСтатус: %group_color%%group%'
@@ -176,7 +215,7 @@ MAIN_SIDEBAR:
   - '&fМонеты: &6⛂%coins%'
   - '&fГемы: &2៙%gems%'
   - '&r&r&r&r&r'
-  - '&7www.backcraft.ru'
+  - '&7backcraft.ru'
 NO_COUNTRY: '&cНет'
 HOLOGRAMS:
   HELPER:
@@ -190,12 +229,94 @@ HOLOGRAMS:
       - ''
       - '&7Кликните &fПКМ&7 по NPC для'
       - '&7создания своей страны'
+  LOCALITY:
+    - '%kingdom% &8:: &7%locality%'
       
 ##################################################
 #               Интерфейс - GUI                  #
 ##################################################
 
 GUI:
+  SERVER_MENU:
+    TITLE: 'Главное меню'
+    ITEMS:
+      PLAYER_HEAD:
+        DISPLAY: '&e%name%'
+        LORE:
+          BASE:
+            - '&7Регистрация: #2cff2c%date% '
+            - '&7Время игры: &b%time%'
+            - ' '
+            - '&f&lСтатистика: '
+            - '&7Статус: %status% '
+            - '&7Уровень: &a⇪%level% '
+            - '&7Опыт: &e★%exp%/★%nexp% '
+            - '&7Монеты: &6⛂%coins%'
+            - '&7Гемы: &2៙%gems%'
+          KINGDOM:
+            - ' '
+            - '&f&lГосударство: '
+            - '&7Страна: %tag% '
+            - '&7Ранг: %rank% '
+            - '&7Влияние: &9☩%influence%'
+      ABOUT:
+        DISPLAY: '&eО проекте'
+        LORE:
+          - ' '
+          - ' #2cff2c&lBACKCRAFT  &f—  &fуникальный сервер, сочетающий в себе '
+          - ' &fчастицу RolePlay и элементы военно-политической игры. '
+          - ' '
+          - ' &7Здесь вы можете сыскать соратников и вместе создать '
+          - ' &7могучее государство, побывать в роли бравого воина, ' 
+          - ' &7политика, предпринимателя, или же простого работяги. '
+          - ' '
+          - ' &8Подробнее на нашем веб-сайте: #7a7a7a&o&nbackcraft.ru'
+          - ' '
+      HELP:
+        DISPLAY: '&eПомощь '
+        LORE:
+          - ' '
+          - ' &f&lКак создать страну? '
+          - ' &7Для этого потребуется найти на спавне '
+          - ' &7NPC-помощника с подписью &6«Государство» '
+          - ' &7и нажать по нему правой кнопкой мыши. '
+          - ' '
+          - ' &f&lКак вступить в страну? '
+          - ' &7Для начала лидер государства должен '
+          - ' &7отправить вам приглашение в страну. '
+          - ' &7Просмотреть список приглашений можно '
+          - ' &7в разделе &b«Приглашения» &8&o(См. ниже) '
+          - ' '
+          - ' &f&lКак заприватить? '
+          - ' &7Для этого требуется основать поселение. '
+          - ' &7Приваты создаются автоматически, после '
+          - ' &7установки специального флага, - он же и '
+          - ' &7инструмент для управления всей колонией. '
+          - ' '
+          - ' &8Подробнее: #7a7a7a&o&nbackcraft.ru/help&r '
+          - ' '
+      COMMANDS:
+        DISPLAY: '&eОсновные команды '
+        LORE:
+          - ' '
+          - ' &f&lОбщее: '
+          - ' &a/changepw &8- &7Изменить пароль '
+          - ' &a/kingdom &8- &7Вызвать меню страны '
+          - ' &a/tell &8- &7Отправить личное сообщение '
+          - ' &a/tpa &8- &7Отправить запрос на телепорт '
+          - ' &a/advert &8- &7Сделать объявление &8(&6⛂50&8) '
+          - ' &a/pay &8- &7Передать монеты другому игроку '
+          - ' &a/skin &8- &7Изменить скин персонажа &8(&6⛂100&8) '
+          - ' &a/spawnpoint &8- &7Установить точку спавна'
+          - ' '
+          - ' &f&lRolePlay: '
+          - ' &3/me &8- &7Описать действие персонажа '
+          - ' &3/do &8- &7Описать события вокруг вас '
+          - ' &3/try &8- &7Случайно определить исход '
+          - '        &7действия вашего персонажа '
+          - ' '
+      INVITES: '&b▶ Приглашения'
+      CART: '&5▶ Мои предметы'
   KINGDOM_INVITES:
     TITLE: 'Приглашения (%count%)'
     SEARCH_TITLE: 'Результаты по запросу "%request%"'
@@ -203,16 +324,16 @@ GUI:
       KINGDOM:
         DISPLAY: '%kingdom%'
         LORE:
+          - '&7Лидер: %leader% '
           - ' '
-          - '&fЛидер: %leader% '
-          - '&fНаселение: &e%citizens% '
-          - '&fВлияние: &9☩%influence% '
+          - '&l&fСтатистика:'
+          - '&7Население: &3☺%citizens% '
+          - '&7Влияние: &9☩%influence% '
+          - '&7Противники: &4☠%hostage% '
           - ' '
-          - '&fСоюзников: &a%allies% '
-          - '&fПротикников: &c%hostage% '
-          - ' '
-          - '&e▶ Принять &7- &6ЛКМ '
-          - '&e▶ Отклонить &7- &6ПКМ '
+          - '&f&lОписание:'
+      ACCEPT: '&e▶ Принять &7- &6ЛКМ '
+      REJECT: '&e▶ Отклонить &7- &6ПКМ '    
       NEXT: '&e▶ Далее'
       DENY: '&cОтклонено'
       SEARCH: '&e▶ Поиск по названию'
@@ -253,27 +374,45 @@ GUI:
       CITIZENS: '&a▶ Население'
       RANKS: '&3▶ Ранги'
       COFFERS: '&6▶ Казна'
-      ALLIES: '&2▶ Союзники'
       HOSTAGE: '&4▶ Противники'
-      TERRITORY: '&9▶ Территория'
+      LOCALITY: '&9▶ Поселения'
       ALERT: '&5▶ Сделать объявление'
       LEAVE: '&c▶ Покинуть страну'
       PROTOCOL:
         DISPLAY: '&eПротокол '
+      NEUTRALITY: 
+        DISPLAY: '#99ff66Нейтралитет'
+        LORE:
+          - '&7Статус: %status%'
+          - ' '
+          - ' &8● &fНейтралитет обозначает невраждебность '
+          - '   &fгосударства: пока он активен, страна '
+          - '   &fне может быть вовлечена в конфликты '
+          - ' '
+        TIP:
+          - '   &7&oПри активации также прекращаются '
+          - '   &7&oуже действующие военные конфликты'
+          - ' '
+        ENABLED: '&eАктивен ещё &6%time%'       
+        DISABLED: '&cНеактивно'
+        ACTIVATE: 
+          ENOUGH: '&e▶ Активировать &7- &6⛂2000'
+          LACK: '&8▶ Активировать &8- &8⛂2000'
+        DEACTIVATE: '&c▶ Отменить &7- &4ЛКМ'
       INFO:
         DISPLAY: '&bОбщая информация '
         LORE:
+          - '&7Основано: #2cff2c%date%'
           - ' '
-          - '&fСтрана: %country% '
-          - '&fЛидер: %leader% '
-          - '&fОсновано: &e%date% '
+          - '&f&lСтатистика: '
+          - '&7Население: &3☺%citizens% '
+          - '&7Влияние: &9☩%influence% '
+          - '&7Казна: &6⛂%coins% '
+          - '&7Противники: &4☠%hostage% '
           - ' '
-          - '&fНаселение: &3☺%citizens% '
-          - '&fВлияние: &9☩%influence% '
-          - '&fКазна: &6⛂%coins% '
-          - ' '
-          - '&fСоюзники: &a%allies% '
-          - '&fОппоненты: &c%hostage% '
+          - '&f&lОписание:        '
+        NOT_SET: '&7Описание не задано'
+        CHANGE: '&e▶ Изменить описание '
   KINGDOM_MEMBERS:
     TITLE: 'Государство | Население'
     ITEMS:
@@ -309,11 +448,11 @@ GUI:
         LEADER: '&8Лидерский ранг'  
         DEFAULT: '&8Ранг по умолчанию'          
         CREATE: '&7Нажмите для создания'
-        NONE: ' &cНет '
+        NONE: '&cНет '
         PERMISSIONS:
           TITLE: '&7Полномочия: '
           DECLARE_WAR: ' &8● &fВойна '
-          DECLARE_ALLIANCE: ' &8● &fСоюз '
+          DECLARE_NEUTRALITY: ' &8● &fНейтралитет '
           INVITE: ' &8● &fПриглашение '
           KICK: ' &8● &fИзгнание '
           SET_RANKS: ' &8● &fПереназначение '
@@ -360,12 +499,13 @@ GUI:
             - '&7объявлять и прекращать &fвойны '
             - ' '
             - '%status%'
-        ALLIANCE:
-          DISPLAY: '&2Союз'
+        NEUTRALITY:
+          DISPLAY: '#99ff66Нейтралитет'
           LORE:
             - ' '
             - '&7Право позволяет обладателю '
-            - '&7заключать и расторгать &fсоюзы '
+            - '&7активировать &fнейтралитет &7за '
+            - '&7счёт государственной казны'
             - ' '
             - '%status%'
         INVITE:
@@ -450,13 +590,123 @@ GUI:
       BUTTON:
         LACK: '&8▶ Внести ⛂%coins%'
         ENOUGH: '&6▶ Внести ⛂%coins%'
-  KINGDOM_ALLIES: 
+      CUSTOM: '&6▶ Своя сумма'
   KINGDOM_HOSTAGES:
+    TITLE: 'Государство | Противники'
+    TARGET: 'Захват | Выбор поселения'
+    ITEMS:
+      FLAG:
+        LORE:
+          - '&7Позиция: %position%'
+          - '&7Лидер: %leader% '
+          - ' '
+          - '&f&lСтатистика: '
+          - '&7Население: &3☺%citizens% '
+          - '&7Влияние: &9☩%influence% '
+          - '&7Противники: &4☠%hostage% '
+          - ' '
+          - '&f&lОписание: '
+        ATTACK: '&e▶ Захват поселения &7- &6ЛКМ'  
+        STOP: '&e▶ Прекратить войну &7- &6ПКМ'  
+        POSITION:
+          AGGRESSOR: '&cАгрессор'
+          DEFENDER: '&aОборона'
+      DECLARE: 
+        LACK:
+          - '&8Начать войну - ⛂1000'
+        ENOUGH: 
+          - '&7Начать войну &8- &6⛂1000'
+      NEUTRALITY:
+        DISPLAY: '&cНевозможно атаковать'
+        LORE:
+          - '&7Дождитесь окончания нейтралитета'
+      CAPTURE: '&e▶ Начать захват   '
+      NONE: '&cНет доступных для захвата поселений'
+      BLOCK: 
+        - '&cНедоступно для захвата '
+  KINGDOM_LOCALITIES:
+    TITLE: 'Государство | Поселения'
+    ITEMS:
+      FLAG:
+        LORE:
+          - ' '
+          - '&7Статус: %status% '
+          - '&7Охват: &3%size%x%size%x%size% '
+          - '&7Влияние: &9☩%influence% '
+          - ' '
+          - '&e▶ Переместиться &7- &6ЛКМ '
+        ATTACK: ' &6⚠ &cИдёт захват поселения &6⚠ '
+        CAPITAL: '&8Столица государства '
+        MAKE_CAPITAL: '&e▶ Сделать столицей &7- &6ПКМ'
+      CREATE: 
+        ENOUGH: '&7Основать поселение &8- &6⛂2500'
+        LACK: '&8Основать поселение - ⛂2500'
+  LOCALITY_PANEL:
+    TITLE: '%kingdom% | %type% %locality%'
+    ITEMS:
+      COVERAGE:
+        DISPLAY: '&bОхват'
+        LORE:
+          - ' '
+          - ' &8● &7%locality% &fохватывает территорию '
+          - '   &fобъёмом &9%size%x%size%x%size% &8(%count%) &fблоков '
+          - '   &fи обладает статусом %type%&f. '
+          - ' '
+        TIP:
+          - ' &7&oДля получения более высокого '
+          - ' &7&oстатуса нужно повышать охват '
+          - ' '
+        UP:
+          ENOUGH: '&e▶ Повысить охват &8- &6⛂500'
+          LACK: '&8▶ Повысить охват &8- ⛂500'
+          MAX: '&cМаксимальный охват'
+      CHESTS:
+        DISPLAY: '&3Хранилище'
+        LORE:
+          - ' '
+          - ' &8● &fГраждане из списка или обладающие '
+          - '   &fуказанным ниже рангами имеют право '
+          - '   &fвзаимодействовать с сундуками '
+          - '   &fна территррии данного поселения'
+          - ' '
+          - ' &aОбладают правом:'
+        ADD: '&e▶ Добавить &7- &6ЛКМ'
+        REMOVE: '&e▶ Удалить &7- &6ПКМ'
+      BUILD:
+        DISPLAY: '&6Строительство'
+        LORE:
+          - ' '
+          - ' &8● &fГраждане из списка или обладающие '
+          - '   &fуказанным ниже рангами имеют право '
+          - '   &fстроить на территории поселения '
+          - ' '
+          - ' &aОбладают правом:'
+      USE:
+        DISPLAY: '&5Взаимодействие'
+        LORE:
+          - ' '
+          - ' &8● &fГраждане из списка или обладающие '
+          - '   &fуказанным ниже рангами имеют право '
+          - '   &fиспользовать механизмы/интерактивные '
+          - '   &fблоки в поселении, исключая сундуки'
+          - ' '
+          - ' &aОбладают правом:'
+      ADD: '&e▶ Добавить &7- &6ЛКМ'
+      REMOVE: '&e▶ Удалить &7- &6ПКМ'
+      COLLAPSE: 
+        DISPLAY: '&cРасформирование'
+        LORE:
+          - ' '
+          - ' &8● &fЗащита на территории поселения будет '
+          - '   &fотключена, и государство потеряет &9☩%influence% '
+          - '   &fочков влияния. В казну вернётся &6⛂%coins% '
+          - ' '
+          - '&e▶ Расформироваь'
   SHARED:
     TO_MAIN: '&e▶ На главную'
     GO_BACK: '&e▶ Назад'
-    EMPTY_SLOT: '&e&o<Пустой слот>'
-    EXIT: '&c▶ Закрыть меню'
+    EMPTY_SLOT: '&e<Пустой слот>'
+    EXIT: '#ba6300▶ Закрыть меню'
     
 ##################################################
 #               Страны - команды                 #
@@ -464,35 +714,49 @@ GUI:
 
 KINGDOM_LOW_LEVEL: '&cТребуется достичь &6⇪3 &cуровня для создания государства.'
 KINGDOM_NAME: 
-  ENTER: '&aKingdoms &8:: &fВведите название государства в чат. &r'
+  ENTER: '#2cff2cKingdoms &8:: &fВведите название государства в чат. &r'
   EXIT: 
     ADVICE: '&e&lTIP &8:: &7Для отмены нажмите на Помощника ещё раз.'
-    SUCCESS: '&aKingdoms &8:: &fВы отменили создание страны!'
+    SUCCESS: '#2cff2cKingdoms &8:: &fВы отменили создание страны!'
   BLACKLISTED: '&cНевозможно создать государство с таким названием!'
-  ONLY_CYRILLIC: '&cНазвание должно быть составлено на кириллице, без прочих симолов.'
+  ONLY_CYRILLIC: '&cНазвание должно быть составлено на кириллице.'
   EXAMPLE: '&7&oПример подходящего названия страны: &f&o%example%'
   TOO_SHORT: '&cЭто название слишком короткое! &7&o(Мин. 3 символа)'
   TOO_LONG: '&cЭто название слишком длинное! &7&o(Макс. 12 символов)'
-KINGDOM_HELP:
-  WRONG_SYNTAX: '&cКоманда составлена неверно. Используйте &6/kingdom help&c.'
-  CREATE:
-    BASE:  ' &8&l| &fОсновать своё государство'
-    COMMAND: '/kingdom create' 
-  INVITES:
-    BASE: ' &8&l| &fПриглашения в государства'
-    COMMAND: '/kingdom invites'
-  INVITE: 
-    BASE: ' &8&l| &fПригласить в страну'
-    COMMAND: '/kingdom invite <ник>'
-  ALERT:
-    BASE: ' &8&l| &fСделать объявление'
-    COMMAND: '/kingdom alert <текст...>'
-  ALLIANCE:
-    BASE: ' &8&l| &fЗаключить союз'
-    COMMAND: '/kingdom alliance <страна>'
-  WAR:
-    BASE: ' &8&l| &fОбъявить войну'
-    COMMAND: '/kingdom war <страна>'
+    
+##################################################
+#                Страны - поселения              #
+##################################################
+
+KINGDOM_LOCALITY:
+  ENTER: '#2cff2cKingdoms &8:: &fВведите название поселения в чат. &r'
+  ALREADY: '&cПоселение с таким названием уже существует!'
+  TOO_SHORT: '&cЭто название слишком короткое! &7&o(Мин. 3 символа)'
+  TOO_LONG: '&cЭто название слишком длинное! &7&o(Макс. 16 символов)'
+  ONLY_CYRILLIC: '&cНазвание должно быть составлено на кириллице.'
+  FLAG: 
+    CONTENT: ' #2cff2cKingdoms &8:: &fУстановите флаг - вокруг него будет создана защита &68x8x8 &fблоков.'
+    TIP: ' &e&lTIP &8:: &7Для отмены бростье флаг на землю'
+    SET: '&cДля начала установите флаг!'
+  CROSS: '&cВаше поселение пересекается с другим!'
+  DENY: '&cВы не можете сделать это на данной территории.'
+  CREATED: '#2cff2c%kingdom% &8:: &fОсновано новое поселение &7- &e%locality%&f!'
+  LEVEL_UP: '#2cff2c%kingdom% &8:: &fПоселение &e%locality% &fтеперь имеет статус %type%&f!'
+  COLLAPSE: '#2cff2c%kingdom% &8:: &fПоселение &e%locality% &fбыло расформировано.'
+  CAPITAL_ATTACK: '&cНельзя изменить поселение во время битвы за поселение.'
+LOCALITY_TYPES:
+  CITY: 'Мегаполис'
+  TOWN: 'Город'
+  VILLAGE: 'Деревня'
+  COMMUNITY: 'Община'
+  CAMP: 'Лагерь'
+LOCALITY_SETTINGS:
+  NAME_ENTER: '#2cff2cKingdoms &8:: &fВведите имя игрока или название ранга в чат. &r'
+  NOT_FOUND: '&cНе удалось найти гражданина/ранг с таим названием.'
+  ALREADY: '&cЭтот пользователь/ранг уже есть в списке.'
+  NONE: '&cЭтого пользователя/ранга ещё нет в списке.'
+  CANNOT: '&cНевозможно взаимодействовать с этотим рангом/гражданином.'
+  CROSS: '&cНевозможно увеличить охват, так как поселение пересекается с &6%locality%&c.'
 
 ##################################################
 #                  Страны - общее                #
@@ -501,37 +765,38 @@ KINGDOM_HELP:
 COINCIDENT_NOT_FOUND: '&cСовпадений не найдено!'
 HAS_NO_KINGDOM: '&cДля начала нужно присоединиться к государству!'
 ALREADY_INVITED: '&cЭтот игрок уже получил приглашение!'
-INVITE_NAME: '&aKingdoms &8:: &fВведите никнейм игрока в чат. &r'
-INVITE_SENT: '&aKingdoms &8:: &fПриглашение успешно отправлено!'
-INVITE_SELF: '&cНельзя отправить приглашение саому себе!'
-INVITE_RECEIVED: '&fПолучено приглашение! Посмотреть &7- &a/kingdom invites'
+INVITE_NAME: '#2cff2cKingdoms &8:: &fВведите никнейм игрока в чат. &r'
+INVITE_SENT: '#2cff2cKingdoms &8:: &fПриглашение успешно отправлено!'
+INVITE_SELF: '&cНельзя отправить приглашение самому себе!'
+INVITE_RECEIVED: '&fПолучено приглашение! Посмотреть &7- &a/menu'
 HAS_NO_INVITES: '&cУ вас нет ни одного приглашения.'
 NOT_INVITED: '&cВы не получали приглашений в это государство.'
-KINGDOM_CREATE: '&aKingdoms &8:: &r%name% &fосновал государсво %kingdom%&f!'
+KINGDOM_CREATE: '#2cff2cKingdoms &8:: &r%name% &fосновал государсво %kingdom%&f!'
 KINGDOM_CONSISTS: '&cВы уже являетесь гражданином государства!'
 KINGDOM_CONSISTS_TARGET: '%name% &cуже являетcя гражданином государства!'
-KINGDOM_COLLAPSE: '&aKingdoms &8:: %name% &fположил конец государству %kingdom%&f!'
+KINGDOM_COLLAPSE: '#2cff2cKingdoms &8:: %name% &fположил конец государству %kingdom%&f!'
 KINGDOM_EXISTS: '&cГосударство с таким названием уже создано!'
 KINGDOM_NOT_EXISTS: '&cГосударство с таким названием ещё не создано или было удалено.'
-KINGDOM_NEWLEADER: '&a%kingdom% &8:: %name% &fстал лидером государства!'
+KINGDOM_NEWLEADER: '#2cff2c%kingdom% &8:: %name% &fстал лидером государства!'
+KINGDOM_KICKED: '&cЭтот гражданин был изгнан из государства.'
 KINGDOM_JOIN: 
-  BROADCAST: '&a%kingdom% &8:: %name% &fприсоединился к нашему государству!'
-  TARGET: '&aKingdoms &8:: &fВы присоединились к государству %kingdom%&f!'
+  BROADCAST: '#2cff2c%kingdom% &8:: %name% &fприсоединился к нашему государству!'
+  TARGET: '#2cff2cKingdoms &8:: &fВы присоединились к государству %kingdom%&f!'
 KINGDOM_KICK: 
-  BROADCAST: '&a%kingdom% &8:: &f%name% &fизгнал %target% &fиз государства!'
+  BROADCAST: '#2cff2c%kingdom% &8:: &f%name% &fизгнал %target% &fиз государства!'
   TARGET: '&cВы были изгнаны из государства &6%kingdom%&c.'
 KINGDOM_LEAVE:
-  BROADCAST: '&a%kingdom% &8:: %name% &fпокинул наше государство!'
-  TARGET: '&aKingdoms &8:: &fВы покинули государство %kingdom%&f.'
+  BROADCAST: '#2cff2c%kingdom% &8:: %name% &fпокинул наше государство!'
+  TARGET: '#2cff2cKingdoms &8:: &fВы покинули государство %kingdom%&f.'
   LEADER: '&cЧтобы покинуть государство, нужно передать лидерский ранг.'
 KINGDOM_RANK:
-  CHAT_NAME: '&aKingdoms &8:: &fВведите название ранга в чат. &r'
+  CHAT_NAME: '#2cff2cKingdoms &8:: &fВведите название ранга в чат. &r'
   EXISTS: '&cРанг с таким названием уже существует!'
   NOT_EXISTS: '&cРанг с таким названием не найден.'
   ONLY_CYRILLIC: '&cНазвание должно быть составлено на кириллице, без прочих симолов.'
   TOO_SHORT: '&cЭто название слишком короткое! &7&o(Мин. 2 символа)'
-  TOO_LONG: '&cЭто название слишком длинное! &7&o(Макс. 12 символов)'
-  SET: '&a%kingdom% &8:: &fВаш ранг был изменён на %rank%&f.'
+  TOO_LONG: '&cЭто название слишком длинное! &7&o(Макс. 20 символов)'
+  SET: '#2cff2c%kingdom% &8:: &fВаш ранг был изменён на %rank%&f.'
 KINGDOM_PROTOCOL:
   KINGDOM_CREATE: ' &8[&6%date%&8] &7Государство &f%name% &7создано &r'
   JOIN: ' &8[&6%date%&8] &f%name% &7получил гражданство &r'
@@ -542,22 +807,59 @@ KINGDOM_PROTOCOL:
   RANK_DELETE: ' &8[&6%date%&8] &7Ранг &f%rank% &7был упразднён &r'
   RANK_SET: ' &8[&6%date%&8] &7Ранг &f%name% &7теперь &f%rank% &r'
   RANK_RENAME: ' &8[&6%date%&8] &f%old% &7теперь &f%new% &r'
-  WAR_DECLARE: ' &8[&6%date%&8] &f%kingdom% &7теперь наш враг &r'
-  WAR_TERMINATE: ' &8[&6%date%&8] &f%kingdom% &7теперь не наш враг &r'
-  ALLIANCE_DECLARE: ' &8[&6%date%&8] &7Заключен союз с &f%kingdom% &r'
-  ALLIANCE_TERMINATE: ' &8[&6%date%&8] &7Расторгнут союз с &f%kingdom% &r'
+  NEUTRALITY_DECLARE: ' &8[&6%date%&8] &f%name% &7активировал нейтралитет &r'
+  NEUTRALITY_TERMINATE: ' &8[&6%date%&8] &f%name% &7деактивировал нейтралитет &r'
+  WAR_DECLARE: ' &8[&6%date%&8] &f%name% &7объявил войну &f%kingdom% &r'
+  WAR_TERMINATE: ' &8[&6%date%&8] &f%name% &7окончил войну с &f%kingdom% &r'
+  WAR_START: ' &8[&6%date%&8] &f%kingdom% &7объявила нам войну &r'
+  WAR_END: ' &8[&6%date%&8] &f%kingdom% &7прекратила войну с нами &r'
+  LOCALITY_CAPTURE: ' &8[&6%date%&8] &7Мы захватили поселение &f%locality% &r'
+  LOCALITY_CAPTURED: ' &8[&6%date%&8] &f%kingdom% &7захватила поселение &f%locality% &r'
+  LOCALITY_NEW: ' &8[&6%date%&8] &f%name% &7основал поселение &f%locality% &r'
+  LOCALITY_LEVEL_UP: ' &8[&6%date%&8] &7Поселение &f%locality% &7теперь &f%type% &r'
+  LOCALITY_RENAME: ' &8[&6%date%&8] &f%oldname% &fпереименовано в &f%newname% &r'
+  LOCALITY_COLLAPSE: ' &8[&6%date%&8] &f%name% &7расформировал &f%locality% &r'
+  DEFEAT: ' &8[&6%date%&8] &7Мы потерпели поражение от &f%aggressor% &r'
+  WIN: ' &8[&6%date%&8] &7Одержана победа над &f%target% &r'
+KINGDOM_DESCRIPTION: '#2cff2cKingdoms &8:: &fВведите текст описания в чат. &r'
+KINGDOM_COFFERS:
+  LACK: '&oРесурсов казны недостаточно '
+  CUSTOM: '#2cff2cKingdoms &8:: &fВведите желаемую сумму в чат. &r'
+KINGDOM_NEUTRALITY: '#2cff2cKingdoms &8:: &fГосударство %kingdom% &fобъявило нейтралитет!'
+KINGDOM_WAR:
+  SELF: '&cНевозможно объявить войну своей же стране.'
+  ENTER: '#2cff2cKingdoms &8:: &fВведите название государства в чат. &r'
+  NONE: '&cГосударство &6%name% &cещё не создано или не существует.'
+  ALREADY: '&cВаше государство уже ведёт войну с %name%&c.'
+  NEUTRALITY: '&cГосударство %name% &cобъявило нейтралитет.'
+  TOO_MANY: '%name% &cне может вести более &610 &cвойн одновременно.'
+  NO_LOCALITIES: '&cДля объявления войны у этого государства должно быть хотя бы одно поселение.'
+  CAPITAL: '&cДля захвата столицы нужно завоевать другие города.'
+  START: '#2cff2cKingdoms &8:: %aggressor% &fобъявила войну государству %target%&f!'
+  END: '#2cff2cKingdoms &8:: &fВойна между государствами %aggressor% &fи %target% &fзавершена!'
+  CAPTURE:
+    START: '#2cff2cKingdoms &8:: &fНачался захват поселения %locality%&f!'
+    FAIL: '#2cff2cKingdoms &8:: &fЗахват поселения %locality% &fостановлен.'
+    SUCCESS: '#2cff2cKingdoms &8:: &fПоселение %locality% &fзахвачено %kingdom%&f!'
+    CAPITAL: '#2cff2cKingdoms &8:: %aggressor% &fзахватила столицу %target% &fи победила в войне!'
+    IN_LOCATION: '&cВы должны находиться на территории этого поселения.'
+    OFFLINE: '&cНельзя начать захват, пока все граждане этого государства оффлайн.'
+    IN_ACTION: '&cЭто государство уже ведёт оборону одного из поселений.'
+  TITLE:
+    WIN:
+      HEADER: '&a&lПобеда'
+      FOOTER: '&fНам удалось захватить все поселения %target%'
+    DEFEAT:
+      HEADER: '&c&lПоражение'
+      FOOTER: '%aggressor% &7захватила все наши поселения'   
 KINGDOM_ALERT:
-  ENTER: '&aKingdoms &8:: &fВведите текст объявления в чат. &o'
+  ENTER: '#2cff2cKingdoms &8:: &fВведите текст объявления в чат. &o'
   FORMAT:
   - ' '
   - ' &a&lОбъявление: &f%text%'
   - ' &7P.S.: от %rank% %name%'
   - ' '
-KINGDOM_WAR:
-  ALERT: '&aKingdoms &8:: %agressor% объявила войну %target%'
-  END: '&aKingdoms &8:: Война между %agressor% и %target% завершена!'
-    
-   
+ 
 
 ##################################################
 #                   Счётчики                     #
@@ -601,14 +903,14 @@ COUNTERS_TYPES:
 
 COUNTERS_ANNOUNCES:
   CHAT:
-    MONSTERS_KILLED: '&aCounters &8:: %name% одолел уже &a&n%count%&f монстров при помощи &a%item%&f!'
-    PLAYERS_KILLED: '&aCounters &8:: %name% одолел уже &a&n%count%&f игроков при помощи &a%item%&f!'
-    BOSSES_KILLED: '&aCounters &8:: %name% победил уже &a&n%count%&f боссов при помощи &a%item%&f!'
-    ANIMALS_KILLED: '&aCounters &8:: %name% растерзал уже &a&n%count%&f животных при помощи &a%item%&f!'
-    VILLAGERS_KILLED: '&aCounters &8:: %name% терроризирует уже &a&n%count%&f жителей при помощи &a%item%&f!'
+    MONSTERS_KILLED: '#2cff2cCounters &8:: %name% одолел уже &a&n%count%&f монстров при помощи &a%item%&f!'
+    PLAYERS_KILLED: '#2cff2cCounters &8:: %name% одолел уже &a&n%count%&f игроков при помощи &a%item%&f!'
+    BOSSES_KILLED: '#2cff2cCounters &8:: %name% победил уже &a&n%count%&f боссов при помощи &a%item%&f!'
+    ANIMALS_KILLED: '#2cff2cCounters &8:: %name% растерзал уже &a&n%count%&f животных при помощи &a%item%&f!'
+    VILLAGERS_KILLED: '#2cff2cCounters &8:: %name% терроризирует уже &a&n%count%&f жителей при помощи &a%item%&f!'
 COUNTER_EMPTY_ITEM: '&cВозьмите предмет в другую руку!'
 COUNTER_ALREADY: '&cНа этот предмет уже установлен счётчик!'
-COUNTER_SET: '&aCounters &8:: &r%counter% &fустановлен на &e%item%&f!'
+COUNTER_SET: '#2cff2cCounters &8:: &r%counter% &fустановлен на &e%item%&f!'
 COUNTERS_INDICATORS:
   MONSTERS: '&7Монстров убито: &6%count%'
   PLAYERS: '&7Игроков убито: &6%count%'
